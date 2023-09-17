@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+#aHomePage {
+  flex-direction: column;
+  #statsArtistContainer {
+    color: var.$background-color-Beige;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    background-color: var.$background-color-BeigeDark;
+    .statsArtistfirstRow {
+      flex-basis: 44%;
+      background-color: var.$text-color-brownDark;
+      margin: 10px;
+      padding: 10px;
+    }
+    #statsArtistLive {
+      display: none;
+      width: 100%;
+      margin: 5px 15px 15px 15px;
+      padding: 10px;
+      background-color: var.$text-color-orangeDark;
+    }
+    p {
+      font-size: var.$font-size-big;
+      font-weight: 600;
+    }
+  }
+  #chartArtistContainer {
+    #chartButtonsDiv {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 25px 15px;
+      justify-content: space-between;
+      h5 {
+        flex-basis: 100%;
+      }
+      .activeBtn {
+        background-color: var.$text-color-orangeDark;
+      }
+      button {
+        @include mix.btn-small(
+          var.$background-color-Beige,
+          var.$text-color-brownDark
+        );
+      }
+    }
+  }
+}

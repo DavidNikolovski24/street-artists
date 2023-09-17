@@ -1,0 +1,8 @@
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+body {
+  font-family: var.$font-family-base;
+  color: var.$text-color-brownDark;
+  background-color: var.$background-color-Beige;
+}

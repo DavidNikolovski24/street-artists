@@ -1,0 +1,80 @@
+@use "./variables" as var;
+@use "sass:math";
+
+%section {
+  padding-top: (var.$gutter-base * 2);
+  padding-bottom: (var.$gutter-base * 2);
+}
+%mobileOnly {
+  max-width: 425px;
+  min-height: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+}
+%headingMenu {
+  padding-top: (var.$gutter-small * 1);
+  padding-bottom: (var.$gutter-small * 1);
+}
+
+%wrap {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+%smallWrapper {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin btn-basic($color, $bgColor) {
+  color: $color;
+  padding: 10px 20px;
+  background-color: $bgColor;
+  border: none;
+  border-radius: 3px;
+}
+@mixin btn-small($color, $bgColor) {
+  color: $color;
+  padding: 5px 10px;
+  background-color: $bgColor;
+  border: none;
+  border-radius: 3px;
+}
+@mixin dropdown-basic($color) {
+  padding: 0 5px;
+  background-color: transparent;
+  border-color: $color;
+  color: $color;
+  border-radius: 3px;
+  width: 90px;
+}
+// signup
+@mixin input-basic($color) {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid $color;
+  color: $color;
+  background-color: transparent;
+  font-size: var.$font-size-medium;
+  padding: 10px 10px 10px 5px;
+  margin-bottom: var.$gutter-base;
+  &:focus {
+    border-bottom: 3px solid $color;
+  }
+  &::placeholder {
+    color: $color;
+  }
+}
+@mixin input-filter($color) {
+  outline: none;
+  border: none;
+  border: 1px solid $color;
+  color: $color;
+  background-color: transparent;
+  padding: 5px;
+  margin-bottom: var.$gutter-base;
+  &::placeholder {
+    color: $color;
+  }
+}

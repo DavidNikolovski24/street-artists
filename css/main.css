@@ -1,0 +1,966 @@
+body {
+  max-width: 425px;
+  min-height: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+}
+
+#logOutHeader, #logInHeader {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+#landingPage .choiceMenuLandingPage {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 1px solid #a16a5e;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #a16a5e;
+  background-color: #fcebd5;
+}
+
+#logOutHeader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fcebd5;
+  box-shadow: inset 0 -9px 10px -10px grey;
+}
+#logOutHeader h1 {
+  font-size: 1.875rem;
+  font-family: "Reenie Beanie", cursive;
+}
+
+#logInHeader {
+  background-color: #fcebd5;
+  box-shadow: inset 0 -9px 10px -10px grey;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+  z-index: 100;
+}
+#logInHeader div #logoPicture {
+  position: absolute;
+  left: 0%;
+  right: 74.88%;
+  top: 0%;
+  bottom: 0%;
+}
+#logInHeader h1 {
+  font-size: 1.875rem;
+  font-family: "Reenie Beanie", cursive;
+  margin-left: 100px;
+}
+#logInHeader #navbarIconsDiv {
+  margin-left: auto;
+  margin-right: 20px;
+}
+#logInHeader #navbarIconsDiv a {
+  color: #a16a5e;
+}
+#logInHeader #headerContainer {
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(-100%);
+  position: absolute;
+  width: 100%;
+  z-index: -100;
+  min-height: 100%;
+  text-align: center;
+  background-color: #a16a5e;
+  box-shadow: 0px 10px 20px 0px #000;
+  padding: 10px;
+}
+#logInHeader #headerContainer.dnone {
+  transform: translateY(100px);
+}
+#logInHeader #headerContainer li {
+  list-style: none;
+  padding-top: 10px;
+}
+#logInHeader #headerContainer li a {
+  color: #fcebd5;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#hamburgerIcon {
+  display: none;
+}
+#hamburgerIcon:checked ~ #logInHeader #headerContainer.dnone {
+  transform: translateY(0%);
+}
+
+#landingPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#landingPage #landingPagelogoDiv {
+  margin-top: 53px;
+}
+#landingPage #landingPagelogoDiv img {
+  width: 150px;
+}
+#landingPage .choiceMenuLandingPage {
+  margin-top: 53px;
+  position: relative;
+}
+#landingPage .choiceMenuLandingPage .joinArtist {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 81%, 0 30%);
+          clip-path: polygon(0 0, 100% 0, 100% 81%, 0 30%);
+  width: 100%;
+  height: 400px;
+  background-color: #edd5bb;
+  text-align: right;
+  position: absolute;
+  text-align: right;
+  align-items: center;
+}
+#landingPage .choiceMenuLandingPage .joinArtist div {
+  margin-right: 20px;
+  margin-top: 30px;
+}
+#landingPage .choiceMenuLandingPage .joinArtist div select {
+  padding: 0 5px;
+  background-color: transparent;
+  border-color: #a16a5e;
+  color: #a16a5e;
+  border-radius: 3px;
+  width: 90px;
+}
+#landingPage .choiceMenuLandingPage .joinArtist div select option {
+  font-size: 0.6875rem;
+}
+#landingPage .choiceMenuLandingPage .joinArtist:hover {
+  transform: scale(1.04);
+}
+#landingPage .choiceMenuLandingPage .joinArtist h2 {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 45px;
+}
+#landingPage .choiceMenuLandingPage .joinVisitor {
+  position: absolute;
+  width: 100%;
+  background-color: #a16a5e;
+  height: 400px;
+  -webkit-clip-path: polygon(0 24%, 100% 73%, 100% 100%, 0 100%);
+          clip-path: polygon(0 24%, 100% 73%, 100% 100%, 0 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+#landingPage .choiceMenuLandingPage .joinVisitor:hover {
+  transform: scale(1.04);
+}
+#landingPage .choiceMenuLandingPage .joinVisitor h2 {
+  color: #fcebd5;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+
+#vHomePage {
+  flex-direction: column;
+}
+#vHomePage .bricksBanner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(../pictures/Bricks.png);
+  height: 200px;
+}
+#vHomePage .bricksBanner div h2 {
+  font-size: 1.875rem;
+  width: 11.875rem;
+}
+#vHomePage .bricksBanner div button {
+  color: #e5e5e5;
+  padding: 10px 20px;
+  background-color: #a16a5e;
+  border: none;
+  border-radius: 3px;
+}
+#vHomePage .moveablePicturesDiv {
+  background-color: #edd5bb;
+  border: 1px solid #a16a5e;
+  padding: 20px;
+  overflow: hidden;
+}
+#vHomePage .moveablePicturesDiv #firstRowMoveable {
+  display: flex;
+  min-width: 100%;
+  animation: marquee 80s linear infinite;
+  justify-content: space-around;
+}
+#vHomePage .moveablePicturesDiv #firstRowMoveable:hover {
+  animation-play-state: paused;
+}
+#vHomePage .moveablePicturesDiv #firstRowMoveable img {
+  display: block;
+  min-width: 250px;
+  height: 200px;
+  margin: 0 1vw;
+}
+#vHomePage .moveablePicturesDiv #firstRowMoveable img:hover {
+  opacity: 0.6;
+}
+#vHomePage .moveablePicturesDiv #firstRowMoveable:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+#vHomePage .moveablePicturesDiv #secondRowMoveable {
+  display: flex;
+  position: relative;
+  animation: marqueeReverse 80s linear infinite;
+  justify-content: space-around;
+}
+#vHomePage .moveablePicturesDiv #secondRowMoveable:hover {
+  animation-play-state: paused;
+}
+#vHomePage .moveablePicturesDiv #secondRowMoveable img {
+  display: block;
+  min-width: 250px;
+  height: 200px;
+  margin: 0 1vw;
+}
+#vHomePage .moveablePicturesDiv #secondRowMoveable img:hover {
+  opacity: 0.6;
+}
+#vHomePage .personCarousel {
+  text-align: center;
+  font-size: 0.6875rem;
+}
+#vHomePage .personCarousel .container {
+  padding: 0 50px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+}
+#vHomePage .personCarousel .container .borderRight {
+  border-right: 3px solid #a16a5e;
+}
+#vHomePage .personCarousel .container .col-6 {
+  height: 250px;
+  display: flex;
+  align-items: center;
+}
+#vHomePage .personCarousel .container .col-6 .carouselMainDiv {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  height: 150px;
+  background-color: #e09686;
+  color: #e5e5e5;
+}
+#vHomePage .personCarousel .container .col-6 .carouselMainDiv .carouselPics {
+  width: 50px;
+  border: 3px solid #a16a5e;
+  margin: 0 auto;
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(-220%);
+  }
+  100% {
+    transform: translateX(1000%);
+  }
+}
+@keyframes marqueeReverse {
+  0% {
+    transform: translateX(1000%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+#signUpPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#signUpPage p {
+  text-align: center;
+  font-size: 0.6875rem;
+}
+#signUpPage img {
+  margin: 0 auto;
+}
+#signUpPage h2 {
+  font-weight: 100;
+  font-size: 1.875rem;
+}
+#signUpPage .signUpFormDiv {
+  background-color: #edd5bb;
+  width: 100%;
+  padding: 1.25rem 0;
+  margin: 1.875rem 0;
+}
+#signUpPage .signUpFormDiv form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+#signUpPage .signUpFormDiv form input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #a16a5e;
+  color: #a16a5e;
+  background-color: transparent;
+  font-size: 1.125rem;
+  padding: 10px 10px 10px 5px;
+  margin-bottom: 1.875rem;
+}
+#signUpPage .signUpFormDiv form input:focus {
+  border-bottom: 3px solid #a16a5e;
+}
+#signUpPage .signUpFormDiv form input::-moz-placeholder {
+  color: #a16a5e;
+}
+#signUpPage .signUpFormDiv form input::placeholder {
+  color: #a16a5e;
+}
+#signUpPage .signUpFormDiv form button {
+  color: #edd5bb;
+  padding: 10px 20px;
+  background-color: #a16a5e;
+  border: none;
+  border-radius: 3px;
+}
+#signUpPage .signUpFormDiv p {
+  font-size: 0.5625rem;
+}
+#signUpPage .signUpSocialLink {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+#signUpPage .signUpSocialLink a {
+  border: 1px solid #a16a5e;
+  padding: 5px 10px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+}
+#signUpPage .signUpSocialLink .fbIconDiv i,
+#signUpPage .signUpSocialLink .fbIconDiv span {
+  color: rgb(2, 65, 237);
+}
+#signUpPage .signUpSocialLink .fbIconDiv i span,
+#signUpPage .signUpSocialLink .fbIconDiv span span {
+  margin-left: 10px;
+}
+#signUpPage .signUpSocialLink .instaIconDiv i,
+#signUpPage .signUpSocialLink .instaIconDiv span {
+  color: rgb(232, 35, 0);
+}
+#signUpPage .signUpSocialLink .instaIconDiv i span,
+#signUpPage .signUpSocialLink .instaIconDiv span span {
+  margin-left: 10px;
+}
+
+#vListingPage {
+  background-color: #edd5bb;
+  justify-content: space-between;
+  position: relative;
+}
+#vListingPage .filterParentDiv {
+  position: absolute;
+  right: 70px;
+}
+#vListingPage .filterParentDiv #filterListingBtn {
+  position: fixed;
+  bottom: 40px;
+  border-radius: 4px;
+  padding: 10px;
+  color: #fcebd5;
+  background-color: #d44c2e;
+  cursor: pointer;
+}
+#vListingPage .cardContainer .customCard:nth-child(even) {
+  margin-top: 30px;
+  padding-bottom: 10px;
+  box-shadow: 0px 2px 20px 0px #000;
+  background-color: #fcebd5;
+}
+#vListingPage .cardContainer .customCard:nth-child(even) img {
+  transition: transform 0.3s ease-in-out;
+}
+#vListingPage .cardContainer .customCard:nth-child(even) img:hover {
+  transform: scaleY(1.2);
+}
+#vListingPage .cardContainer .customCard:nth-child(even) .customcardArtist {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+#vListingPage .cardContainer .customCard:nth-child(even) .customcardArtist h3 {
+  font-family: "Reenie Beanie", cursive;
+  display: inline;
+}
+#vListingPage .cardContainer .customCard:nth-child(even) .customcardArtist span {
+  color: #fcebd5;
+  padding: 5px 10px;
+  background-color: #a16a5e;
+  border: none;
+  border-radius: 3px;
+}
+#vListingPage .cardContainer .customCard:nth-child(even) .customcardText {
+  padding: 0 20px;
+}
+#vListingPage .cardContainer .customCard:nth-child(odd) {
+  margin-top: 30px;
+  padding-bottom: 10px;
+  background-color: #a16a5e;
+  color: #fcebd5;
+  box-shadow: 0px 2px 20px 0px #000;
+}
+#vListingPage .cardContainer .customCard:nth-child(odd) img {
+  transition: transform 0.3s ease-in-out;
+}
+#vListingPage .cardContainer .customCard:nth-child(odd) img:hover {
+  transform: scaleY(1.2);
+}
+#vListingPage .cardContainer .customCard:nth-child(odd) .customcardArtist {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+#vListingPage .cardContainer .customCard:nth-child(odd) .customcardArtist h3 {
+  font-family: "Reenie Beanie", cursive;
+  display: inline;
+}
+#vListingPage .cardContainer .customCard:nth-child(odd) .customcardArtist span {
+  color: #a16a5e;
+  padding: 5px 10px;
+  background-color: #fcebd5;
+  border: none;
+  border-radius: 3px;
+}
+#vListingPage .cardContainer .customCard:nth-child(odd) .customcardText {
+  padding: 0 20px;
+}
+
+#vFilterPage {
+  position: absolute;
+  display: none;
+  height: 100vh;
+  background-color: #a16a5e;
+  animation: showsUp 0.7s ease-in;
+  overflow: hidden;
+}
+#vFilterPage #vFilterContainer {
+  color: #fcebd5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+#vFilterPage #vFilterContainer #vFilterPageCheckDiv {
+  cursor: pointer;
+  position: absolute;
+  bottom: 150px;
+  right: 10px;
+  padding: 15px;
+  width: 60px;
+  background-color: #d44c2e;
+}
+#vFilterPage #vFilterContainer h6 {
+  margin-bottom: 0.9375rem;
+}
+#vFilterPage #vFilterContainer input {
+  outline: none;
+  border: none;
+  border: 1px solid #fcebd5;
+  color: #fcebd5;
+  background-color: transparent;
+  padding: 5px;
+  margin-bottom: 1.875rem;
+}
+#vFilterPage #vFilterContainer input::-moz-placeholder {
+  color: #fcebd5;
+}
+#vFilterPage #vFilterContainer input::placeholder {
+  color: #fcebd5;
+}
+#vFilterPage #vFilterContainer select {
+  padding: 0 5px;
+  background-color: transparent;
+  border-color: #fcebd5;
+  color: #fcebd5;
+  border-radius: 3px;
+  width: 90px;
+  margin-bottom: 1.875rem;
+}
+#vFilterPage #vFilterContainer select option {
+  color: #a16a5e;
+}
+#vFilterPage #vFilterContainer #vFilterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.875rem;
+}
+#vFilterPage #vFilterContainer #vFilterHeader h1 {
+  font-weight: bold;
+  display: inline;
+}
+#vFilterPage #vFilterContainer #vFilterHeader i {
+  color: #fcebd5;
+  cursor: pointer;
+}
+#vFilterPage #vFilterContainer #vFilterTitleDiv {
+  border-bottom: 3px solid #fcebd5;
+  margin-bottom: 1.875rem;
+}
+#vFilterPage #vFilterContainer #vFilterArtistDiv {
+  border-bottom: 3px solid #fcebd5;
+  margin-bottom: 1.875rem;
+}
+#vFilterPage #vFilterContainer #vFilterPriceDiv {
+  border-bottom: 3px solid #fcebd5;
+  margin-bottom: 1.875rem;
+}
+#vFilterPage #vFilterContainer #vFilterPriceDiv #vFilterParentPriceDiv {
+  display: flex;
+  justify-content: space-between;
+}
+#vFilterPage #vFilterContainer #vFilterPriceDiv #vFilterParentPriceDiv div:nth-child(2) {
+  text-align: right;
+}
+#vFilterPage #vFilterContainer #vFilterPriceDiv #vFilterParentPriceDiv input {
+  width: 60%;
+}
+#vFilterPage #vFilterContainer #vFilterTypeDiv {
+  border-bottom: 3px solid #fcebd5;
+  margin-bottom: 1.875rem;
+}
+
+@keyframes showsUp {
+  0% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+#aHomePage {
+  flex-direction: column;
+}
+#aHomePage #statsArtistContainer {
+  color: #fcebd5;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  background-color: #edd5bb;
+}
+#aHomePage #statsArtistContainer .statsArtistfirstRow {
+  flex-basis: 44%;
+  background-color: #a16a5e;
+  margin: 10px;
+  padding: 10px;
+}
+#aHomePage #statsArtistContainer #statsArtistLive {
+  display: none;
+  width: 100%;
+  margin: 5px 15px 15px 15px;
+  padding: 10px;
+  background-color: #d44c2e;
+}
+#aHomePage #statsArtistContainer p {
+  font-size: 3rem;
+  font-weight: 600;
+}
+#aHomePage #chartArtistContainer #chartButtonsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px 15px;
+  justify-content: space-between;
+}
+#aHomePage #chartArtistContainer #chartButtonsDiv h5 {
+  flex-basis: 100%;
+}
+#aHomePage #chartArtistContainer #chartButtonsDiv .activeBtn {
+  background-color: #d44c2e;
+}
+#aHomePage #chartArtistContainer #chartButtonsDiv button {
+  color: #fcebd5;
+  padding: 5px 10px;
+  background-color: #a16a5e;
+  border: none;
+  border-radius: 3px;
+}
+
+#aItemsPage {
+  flex-direction: column;
+}
+#aItemsPage #addNewItemContainer {
+  background-color: #edd5bb;
+  width: 100%;
+  padding: 30px 0;
+}
+#aItemsPage #addNewItemContainer #AddNewOuterDiv {
+  background-color: #fcebd5;
+  padding: 10px 20px;
+}
+#aItemsPage #addNewItemContainer #AddNewOuterDiv #addNewInnerDiv {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px dotted #a16a5e;
+  background-color: #fcebd5;
+  cursor: pointer;
+}
+#aItemsPage #allItemsContainer .artistItemCard {
+  box-shadow: 0px 2px 20px 0px #000;
+  margin-bottom: 1.875rem;
+}
+#aItemsPage #allItemsContainer .artistItemCard .artistItemCardImg {
+  width: 100%;
+}
+#aItemsPage #allItemsContainer .artistItemCard .artistItemCardImg img {
+  width: 100%;
+  height: 200px;
+  transition: transform 0.3s ease-in-out;
+}
+#aItemsPage #allItemsContainer .artistItemCard .artistItemCardImg img:hover {
+  transform: scaleY(1.2);
+}
+#aItemsPage #allItemsContainer .artistItemCard .artistItemCardTitleDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+#aItemsPage #allItemsContainer .artistItemCard .artistItemCardTitleDiv h4 {
+  margin: 0;
+}
+#aItemsPage #allItemsContainer .artistItemCard .artistItemCardTitleDiv .artistItemCardPrice {
+  color: #fcebd5;
+  padding: 5px 10px;
+  background-color: #a16a5e;
+  border: none;
+  border-radius: 3px;
+}
+#aItemsPage #allItemsContainer .artistItemCard .artistItemCardDesc {
+  padding: 15px;
+  text-align: justify;
+}
+#aItemsPage #allItemsContainer .artistItemCard .artistItemCardBtnDiv {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #a16a5e;
+}
+#aItemsPage #allItemsContainer .artistItemCard .artistItemCardBtnDiv .artistItemCardAuctBtn {
+  color: white;
+  padding: 5px 10px;
+  background-color: #1b59ac;
+  border: none;
+  border-radius: 3px;
+}
+#aItemsPage #allItemsContainer .artistItemCard .artistItemCardBtnDiv .artistItemCardUnpublishBtn {
+  color: white;
+  padding: 5px 10px;
+  background-color: #1bac6f;
+  border: none;
+  border-radius: 3px;
+}
+#aItemsPage #allItemsContainer .artistItemCard .artistItemCardBtnDiv .artistItemCardRemoveBtn {
+  color: white;
+  padding: 5px 10px;
+  background-color: #d44c2e;
+  border: none;
+  border-radius: 3px;
+}
+#aItemsPage #allItemsContainer .artistItemCard .artistItemCardBtnDiv .artistItemCardEditBtn {
+  color: #a16a5e;
+  padding: 5px 10px;
+  background-color: #fcebd5;
+  border: none;
+  border-radius: 3px;
+}
+#aItemsPage #addNewItemDiv {
+  display: none;
+  color: #fcebd5;
+  background-color: #a16a5e;
+  padding: 20px;
+}
+#aItemsPage #addNewItemDiv .error {
+  color: yellow;
+}
+#aItemsPage #addNewItemDiv .width100 {
+  width: 100%;
+}
+#aItemsPage #addNewItemDiv select,
+#aItemsPage #addNewItemDiv input,
+#aItemsPage #addNewItemDiv textarea {
+  outline: none;
+  border: none;
+  border: 1px solid #fcebd5;
+  color: #fcebd5;
+  background-color: transparent;
+  padding: 5px;
+  margin-bottom: 1.875rem;
+}
+#aItemsPage #addNewItemDiv select::-moz-placeholder, #aItemsPage #addNewItemDiv input::-moz-placeholder, #aItemsPage #addNewItemDiv textarea::-moz-placeholder {
+  color: #fcebd5;
+}
+#aItemsPage #addNewItemDiv select::placeholder,
+#aItemsPage #addNewItemDiv input::placeholder,
+#aItemsPage #addNewItemDiv textarea::placeholder {
+  color: #fcebd5;
+}
+#aItemsPage #addNewItemDiv option {
+  background-color: #a16a5e;
+}
+#aItemsPage #addNewItemDiv #titleNewItem {
+  display: flex;
+  justify-content: space-between;
+}
+#aItemsPage #addNewItemDiv #titleNewItem h1 {
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+#aItemsPage #addNewItemDiv #addNewItemForm .typeMainDiv label {
+  display: block;
+}
+#aItemsPage #addNewItemDiv #addNewItemForm #addNewCameraDivOuter {
+  position: relative;
+  width: 100%;
+  border: 4px dotted #fcebd5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#aItemsPage #addNewItemDiv #addNewItemForm #addNewCameraDivOuter #capturedImage {
+  position: absolute;
+}
+#aItemsPage #addNewItemDiv #addNewItemForm #addNewCameraDivOuter #addNewCameraBinBtn {
+  color: #d44c2e;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  display: none;
+}
+#aItemsPage #addNewItemDiv #addNewItemForm #addNewCameraDivOuter #addNewCameraDivInner {
+  text-align: center;
+  margin: 100px;
+}
+#aItemsPage #addNewItemDiv #addNewItemForm #addNewCameraDivOuter #addNewCameraDivInner i {
+  font-size: 70px;
+  margin-bottom: 40px;
+}
+#aItemsPage #addNewItemDiv #addNewItemForm #addNewItemBtnDiv {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+}
+#aItemsPage #addNewItemDiv #addNewItemForm #addNewItemBtnDiv #addNewItemBtn {
+  color: #fcebd5;
+  padding: 10px 20px;
+  background-color: #d44c2e;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  width: 46%;
+}
+#aItemsPage #addNewItemDiv #addNewItemForm #addNewItemBtnDiv #addNewItemCloseBtn {
+  color: black;
+  padding: 10px 20px;
+  background-color: #e5e5e5;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  width: 46%;
+}
+#aItemsPage #addNewItemCameraDiv {
+  display: none;
+  background-color: #a16a5e;
+  height: 100vh;
+}
+#aItemsPage #addNewItemCameraDiv #cameraContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+}
+#aItemsPage #addNewItemCameraDiv #cameraContainer i {
+  color: #fcebd5;
+}
+#aItemsPage #addNewItemCameraDiv #cameraContainer video {
+  width: 90%;
+  height: 100%;
+}
+#aItemsPage #addNewItemCameraDiv #cameraContainer #liveCaptureCanvas {
+  display: none;
+}
+
+#auction {
+  flex-direction: column;
+}
+#auction #auctionLiveContainerDiv #auctionCardDiv {
+  background-color: #a16a5e;
+  color: #fcebd5;
+  padding-bottom: 1.25rem;
+}
+#auction #auctionLiveContainerDiv #auctionCardDiv #auctionCardInfoDiv {
+  padding: 0 0.9375rem 0.9375rem 0.9375rem;
+}
+#auction #auctionLiveContainerDiv #auctionCardDiv #auctionCardInfoDiv div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#auction #auctionLiveContainerDiv #auctionCardDiv #auctionCardInfoDiv div h1 {
+  font-size: 1.875rem;
+  font-family: "Reenie Beanie", cursive;
+}
+#auction #auctionLiveContainerDiv #auctionCardDiv #auctionCardInfoDiv div p {
+  font-size: 0.6875rem;
+}
+#auction #auctionLiveContainerDiv #auctionCardDiv #auctionCardInfoDiv h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.9375rem;
+}
+#auction #auctionLiveContainerDiv #auctionCardDiv #auctionCardInfoDiv p {
+  font-size: 0.6875rem;
+  text-align: justify;
+}
+#auction #auctionLiveContainerDiv #auctionLiveDiv {
+  text-align: center;
+  background-color: #d44c2e;
+  color: #fcebd5;
+  padding: 1.875rem 0;
+}
+#auction #auctionLiveContainerDiv #auctionLiveDiv h1 {
+  font-size: 2rem;
+}
+#auction #auctionLiveContainerDiv #auctionLiveDiv h2 {
+  font-size: 2rem;
+}
+#auction #auctionLiveContainerDiv #auctionLiveDiv p {
+  font-size: 0.6875rem;
+  margin: 0.9375rem 0;
+}
+#auction #auctionLiveContainerDiv #auctionLiveDiv h3 {
+  font-size: 1.875rem;
+  font-weight: bolder;
+}
+#auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv {
+  display: flex;
+  flex-direction: column;
+  background-color: #a16a5e;
+  color: #fcebd5;
+  padding: 0.9375rem 0;
+}
+#auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv #auctionBidDiv form {
+  text-align: center;
+}
+#auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv #auctionBidDiv form input {
+  outline: none;
+  border: none;
+  border: 1px solid #fcebd5;
+  color: #fcebd5;
+  background-color: transparent;
+  padding: 5px;
+  margin-bottom: 1.875rem;
+}
+#auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv #auctionBidDiv form input::-moz-placeholder {
+  color: #fcebd5;
+}
+#auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv #auctionBidDiv form input::placeholder {
+  color: #fcebd5;
+}
+#auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv #auctionBidDiv form button {
+  color: #e5e5e5;
+  padding: 5px 10px;
+  background-color: #1bac6f;
+  border: none;
+  border-radius: 3px;
+}
+#auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv #auctionHistoryDiv {
+  margin: 0 0.9375rem;
+}
+#auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv #auctionHistoryDiv td {
+  border: 1px solid #fcebd5;
+}
+#auction #auctionBidAndHistoryDiv p {
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+#auction #auctionBidAndHistoryDiv #auctionHistoryUl {
+  list-style: none;
+}
+#auction #auctionBidAndHistoryDiv #auctionHistoryUl li {
+  border-bottom: 1px solid #fcebd5;
+  border-top: 1px solid #fcebd5;
+}
+#auction #auctionNoLiveCardDiv {
+  border: 1px solid #a16a5e;
+  margin: 1.875rem;
+  text-align: center;
+}
+#auction #auctionNoLiveCardDiv div {
+  padding: 1.875rem;
+}
+#auction #auctionNoLiveCardDiv div p {
+  margin-top: 1.25rem;
+}/*# sourceMappingURL=main.css.map */

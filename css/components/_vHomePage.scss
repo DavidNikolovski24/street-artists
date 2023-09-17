@@ -1,0 +1,136 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+@function rem-calc($size) {
+  @return (math.div($size, 16)) * 1rem;
+}
+#vHomePage {
+  flex-direction: column;
+  .bricksBanner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../pictures/Bricks.png);
+    height: 200px;
+    div {
+      h2 {
+        font-size: var.$font-size-heading;
+        width: rem-calc(190);
+      }
+    }
+    div {
+      button {
+        @include mix.btn-basic(
+          var.$background-color-Grey,
+          var.$text-color-brownDark
+        );
+      }
+    }
+  }
+  .moveablePicturesDiv {
+    background-color: var.$background-color-BeigeDark;
+    border: 1px solid var.$text-color-brownDark;
+    padding: 20px;
+    overflow: hidden;
+
+    #firstRowMoveable {
+      display: flex;
+      min-width: 100%;
+      animation: marquee 80s linear infinite;
+      justify-content: space-around;
+      &:hover {
+        animation-play-state: paused;
+      }
+      img {
+        display: block;
+        min-width: 250px;
+        height: 200px;
+        margin: 0 1vw;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
+    }
+    #secondRowMoveable {
+      display: flex;
+      position: relative;
+      animation: marqueeReverse 80s linear infinite;
+      justify-content: space-around;
+      &:hover {
+        animation-play-state: paused;
+      }
+      img {
+        display: block;
+        min-width: 250px;
+        height: 200px;
+        margin: 0 1vw;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  .personCarousel {
+    text-align: center;
+    font-size: var.$font-size-small;
+    .container {
+      padding: 0 50px;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      .borderRight {
+        border-right: 3px solid var.$text-color-brownDark;
+      }
+      .col-6 {
+        height: 250px;
+        display: flex;
+        align-items: center;
+        .carouselMainDiv {
+          display: flex;
+          align-items: center;
+          padding: 0 20px;
+          position: relative;
+          height: 150px;
+          background-color: var.$background-color-SkinColor;
+          color: var.$background-color-Grey;
+
+          .carouselPics {
+            width: 50px;
+            border: 3px solid var.$text-color-brownDark;
+            margin: 0 auto;
+            position: absolute;
+            top: -15%;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(-220%);
+  }
+  100% {
+    transform: translateX(1000%);
+  }
+}
+@keyframes marqueeReverse {
+  0% {
+    transform: translateX(1000%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

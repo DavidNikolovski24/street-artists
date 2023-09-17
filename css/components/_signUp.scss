@@ -1,0 +1,75 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+#signUpPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    text-align: center;
+    font-size: var.$font-size-small;
+  }
+  img {
+    margin: 0 auto;
+  }
+  h2 {
+    font-weight: 100;
+    font-size: var.$font-size-heading;
+  }
+  .signUpFormDiv {
+    background-color: var.$background-color-BeigeDark;
+    width: 100%;
+    padding: var.$gutter-small 0;
+    margin: var.$gutter-base 0;
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin: 0 auto;
+      margin-bottom: var.$gutter-small;
+
+      input {
+        @include mix.input-basic(var.$text-color-brownDark);
+      }
+      button {
+        @include mix.btn-basic(
+          var.$background-color-BeigeDark,
+          var.$text-color-brownDark
+        );
+      }
+    }
+    p {
+      font-size: var.$font-size-extraSmall;
+    }
+  }
+  .signUpSocialLink {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    a {
+      border: 1px solid var.$text-color-brownDark;
+      padding: 5px 10px;
+      margin-top: var.$gutter-small;
+      margin-bottom: var.$gutter-small;
+      display: inline-block;
+    }
+    .fbIconDiv {
+      i,
+      span {
+        color: rgb(2, 65, 237);
+        span {
+          margin-left: 10px;
+        }
+      }
+    }
+    .instaIconDiv {
+      i,
+      span {
+        color: rgb(232, 35, 0);
+        span {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

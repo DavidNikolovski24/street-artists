@@ -1,0 +1,107 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+#auction {
+  flex-direction: column;
+  #auctionLiveContainerDiv {
+    #auctionCardDiv {
+      background-color: var.$text-color-brownDark;
+      color: var.$background-color-Beige;
+      padding-bottom: var.$gutter-small;
+      #auctionCardInfoDiv {
+        padding: 0 var.$gutter-tiny var.$gutter-tiny var.$gutter-tiny;
+        div {
+          h1 {
+            font-size: var.$font-size-heading;
+            font-family: var.$font-family-handWrite;
+          }
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          p {
+            font-size: var.$font-size-small;
+          }
+        }
+        h3 {
+          font-size: var.$font-size-hamburgerMenu;
+          text-align: center;
+          margin-bottom: var.$gutter-tiny;
+        }
+        p {
+          font-size: var.$font-size-small;
+          text-align: justify;
+        }
+      }
+    }
+    #auctionLiveDiv {
+      text-align: center;
+      background-color: var.$text-color-orangeDark;
+      color: var.$background-color-Beige;
+      padding: var.$gutter-base 0;
+      h1 {
+        font-size: var.$font-size-hamburgerMenu;
+      }
+      h2 {
+        font-size: var.$font-size-hamburgerMenu;
+      }
+      p {
+        font-size: var.$font-size-small;
+        margin: var.$gutter-tiny 0;
+      }
+      h3 {
+        font-size: var.$font-size-heading;
+        font-weight: bolder;
+      }
+    }
+    #auctionBidAndHistoryDiv {
+      display: flex;
+      flex-direction: column;
+      background-color: var.$text-color-brownDark;
+      color: var.$background-color-Beige;
+      padding: var.$gutter-tiny 0;
+      #auctionBidDiv {
+        form {
+          text-align: center;
+          input {
+            @include mix.input-filter(var.$background-color-Beige);
+          }
+          button {
+            @include mix.btn-small(
+              var.$background-color-Grey,
+              var.$text-color-green
+            );
+          }
+        }
+      }
+      #auctionHistoryDiv {
+        margin: 0 var.$gutter-tiny;
+        td {
+          border: 1px solid var.$background-color-Beige;
+        }
+      }
+    }
+  }
+  #auctionBidAndHistoryDiv {
+    p {
+      font-weight: bold;
+      font-size: var.$font-size-medium;
+    }
+    #auctionHistoryUl {
+      list-style: none;
+      li {
+        border-bottom: 1px solid var.$background-color-Beige;
+        border-top: 1px solid var.$background-color-Beige;
+      }
+    }
+  }
+  #auctionNoLiveCardDiv {
+    border: 1px solid var.$text-color-brownDark;
+    margin: var.$gutter-base;
+    text-align: center;
+    div {
+      padding: var.$gutter-base;
+      p {
+        margin-top: var.$gutter-small;
+      }
+    }
+  }
+}

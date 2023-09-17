@@ -1,0 +1,31 @@
+@use "../abstracts/mixins" as mix;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @extend %mobileOnly;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 1px solid #a16a5e;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}

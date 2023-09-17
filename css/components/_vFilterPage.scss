@@ -1,0 +1,89 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+#vFilterPage {
+  position: absolute;
+  display: none;
+  height: 100vh;
+  background-color: var.$text-color-brownDark;
+  animation: showsUp 0.7s ease-in;
+  overflow: hidden;
+
+  #vFilterContainer {
+    color: var.$background-color-Beige;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+    #vFilterPageCheckDiv {
+      cursor: pointer;
+      position: absolute;
+      bottom: 150px;
+      right: 10px;
+      padding: 15px;
+      width: 60px;
+      background-color: var.$text-color-orangeDark;
+    }
+    h6 {
+      margin-bottom: var.$gutter-tiny;
+    }
+    input {
+      @include mix.input-filter(var.$background-color-Beige);
+    }
+    select {
+      @include mix.dropdown-basic(var.$background-color-Beige);
+      margin-bottom: var.$gutter-base;
+      option {
+        color: var.$text-color-brownDark;
+      }
+    }
+    #vFilterHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var.$gutter-base;
+      h1 {
+        font-weight: bold;
+        display: inline;
+      }
+      i {
+        color: var.$background-color-Beige;
+        cursor: pointer;
+      }
+    }
+    #vFilterTitleDiv {
+      border-bottom: 3px solid var.$background-color-Beige;
+      margin-bottom: var.$gutter-base;
+    }
+    #vFilterArtistDiv {
+      border-bottom: 3px solid var.$background-color-Beige;
+      margin-bottom: var.$gutter-base;
+    }
+    #vFilterPriceDiv {
+      border-bottom: 3px solid var.$background-color-Beige;
+      margin-bottom: var.$gutter-base;
+      #vFilterParentPriceDiv {
+        display: flex;
+        justify-content: space-between;
+        div:nth-child(2) {
+          text-align: right;
+        }
+        input {
+          width: 60%;
+        }
+      }
+    }
+    #vFilterTypeDiv {
+      border-bottom: 3px solid var.$background-color-Beige;
+      margin-bottom: var.$gutter-base;
+    }
+  }
+}
+@keyframes showsUp {
+  0% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

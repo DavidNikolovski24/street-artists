@@ -1,0 +1,88 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+#vListingPage {
+  background-color: var.$background-color-BeigeDark;
+  justify-content: space-between;
+  position: relative;
+  .filterParentDiv {
+    position: absolute;
+    right: 70px;
+
+    #filterListingBtn {
+      position: fixed;
+      bottom: 40px;
+      border-radius: 4px;
+      padding: 10px;
+      color: var.$background-color-Beige;
+      background-color: var.$text-color-orangeDark;
+      cursor: pointer;
+    }
+  }
+
+  .cardContainer {
+    .customCard:nth-child(even) {
+      margin-top: 30px;
+      padding-bottom: 10px;
+      box-shadow: 0px 2px 20px 0px #000;
+      background-color: var.$background-color-Beige;
+      img {
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: scaleY(1.2);
+        }
+      }
+      .customcardArtist {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        h3 {
+          font-family: var.$font-family-handWrite;
+          display: inline;
+        }
+        span {
+          @include mix.btn-small(
+            var.$background-color-Beige,
+            var.$text-color-brownDark
+          );
+        }
+      }
+      .customcardText {
+        padding: 0 20px;
+      }
+    }
+    .customCard:nth-child(odd) {
+      margin-top: 30px;
+      padding-bottom: 10px;
+      background-color: var.$text-color-brownDark;
+      color: var.$background-color-Beige;
+      box-shadow: 0px 2px 20px 0px #000;
+      img {
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: scaleY(1.2);
+        }
+      }
+      .customcardArtist {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        h3 {
+          font-family: var.$font-family-handWrite;
+          display: inline;
+        }
+        span {
+          @include mix.btn-small(
+            var.$text-color-brownDark,
+            var.$background-color-Beige
+          );
+        }
+      }
+      .customcardText {
+        padding: 0 20px;
+      }
+    }
+  }
+}

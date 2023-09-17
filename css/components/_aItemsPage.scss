@@ -1,0 +1,185 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+#aItemsPage {
+  flex-direction: column;
+  #addNewItemContainer {
+    background-color: var.$background-color-BeigeDark;
+    width: 100%;
+    padding: 30px 0;
+    #AddNewOuterDiv {
+      background-color: var.$background-color-Beige;
+      padding: 10px 20px;
+
+      #addNewInnerDiv {
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px dotted var.$text-color-brownDark;
+        background-color: var.$background-color-Beige;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #allItemsContainer {
+    .artistItemCard {
+      box-shadow: 0px 2px 20px 0px #000;
+      margin-bottom: var.$gutter-base;
+      .artistItemCardImg {
+        width: 100%;
+        img {
+          width: 100%;
+          height: 200px;
+          transition: transform 0.3s ease-in-out;
+          &:hover {
+            transform: scaleY(1.2);
+          }
+        }
+      }
+      .artistItemCardTitleDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        h4 {
+          margin: 0;
+        }
+        .artistItemCardPrice {
+          @include mix.btn-small(
+            var.$background-color-Beige,
+            var.$text-color-brownDark
+          );
+        }
+      }
+      .artistItemCardDesc {
+        padding: 15px;
+        text-align: justify;
+      }
+      .artistItemCardBtnDiv {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        background-color: var.$text-color-brownDark;
+
+        .artistItemCardAuctBtn {
+          @include mix.btn-small(white, var.$text-color-blueDark);
+        }
+        .artistItemCardUnpublishBtn {
+          @include mix.btn-small(white, var.$text-color-green);
+        }
+        .artistItemCardRemoveBtn {
+          @include mix.btn-small(white, var.$text-color-orangeDark);
+        }
+        .artistItemCardEditBtn {
+          @include mix.btn-small(
+            var.$text-color-brownDark,
+            var.$background-color-Beige
+          );
+        }
+      }
+    }
+  }
+  #addNewItemDiv {
+    display: none;
+    .error {
+      color: yellow;
+    }
+    color: var.$background-color-Beige;
+    background-color: var.$text-color-brownDark;
+    padding: 20px;
+    .width100 {
+      width: 100%;
+    }
+
+    select,
+    input,
+    textarea {
+      @include mix.input-filter(var.$background-color-Beige);
+    }
+    option {
+      background-color: var.$text-color-brownDark;
+    }
+    #titleNewItem {
+      display: flex;
+      justify-content: space-between;
+      h1 {
+        font-size: var.$font-size-heading;
+        font-weight: 600;
+      }
+    }
+    #addNewItemForm {
+      .typeMainDiv label {
+        display: block;
+      }
+      #addNewCameraDivOuter {
+        position: relative;
+        width: 100%;
+        border: 4px dotted var.$background-color-Beige;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #capturedImage {
+          position: absolute;
+        }
+        #addNewCameraBinBtn {
+          color: var.$text-color-orangeDark;
+          position: absolute;
+          top: 30px;
+          right: 20px;
+          z-index: 1000;
+          cursor: pointer;
+          display: none;
+        }
+        #addNewCameraDivInner {
+          text-align: center;
+          margin: 100px;
+          i {
+            font-size: 70px;
+            margin-bottom: 40px;
+          }
+        }
+      }
+      #addNewItemBtnDiv {
+        display: flex;
+        justify-content: space-between;
+        margin-top: var.$gutter-small;
+        #addNewItemBtn {
+          @include mix.btn-basic(
+            var.$background-color-Beige,
+            var.$text-color-orangeDark
+          );
+          font-weight: bold;
+          width: 46%;
+        }
+        #addNewItemCloseBtn {
+          @include mix.btn-basic(black, var.$background-color-Grey);
+          font-weight: bold;
+          width: 46%;
+        }
+      }
+    }
+  }
+  #addNewItemCameraDiv {
+    display: none;
+    background-color: var.$text-color-brownDark;
+    height: 100vh;
+
+    #cameraContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 70vh;
+      i {
+        color: var.$background-color-Beige;
+      }
+      video {
+        width: 90%;
+        height: 100%;
+      }
+      #liveCaptureCanvas {
+        display: none;
+      }
+    }
+  }
+}

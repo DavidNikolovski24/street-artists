@@ -1,7 +1,7 @@
 import { getLocalStorageItems, editLocalStorageItems } from "../global.js";
 let items = getLocalStorageItems();
 
-const backBtn = document.querySelector(".fa-house "),
+const backBtn = document.querySelector(".lni-home "),
   auctionLiveContainerDiv = document.querySelector("#auctionLiveContainerDiv"),
   auctionNoLiveCardDiv = document.querySelector("#auctionNoLiveCardDiv"),
   auctionCard = document.querySelector("#auctionCard"),

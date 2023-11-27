@@ -23,6 +23,10 @@
     />
 
     <link rel="stylesheet" href="./css/main.css" />
+    <!--  -->
+    <link rel="stylesheet" href="lineicons.css" />
+    <link rel="stylesheet" href="./icons/lineicons.css" />
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -34,9 +38,9 @@
       </div>
       <h1 id="artistHeader">Street ARTists</h1>
       <div id="navbarIconsDiv">
-        <a href="#auction"><i class="fa-solid fa-gavel fa-xl"></i></a>
-        <i class="fa-solid fa-bars fa-xl"></i>
-        <i class="fa-solid fa-house fa-xl"></i>
+        <a href="#auction"><i class="lni lni-construction-hammer"></i></a>
+        <i class="lni lni-menu"></i>
+        <i class="lni lni-home"></i>
       </div>
       <ul id="headerContainer" class="">
         <li><a href="#aHomePage">Home</a></li>
@@ -210,7 +214,7 @@
         <div class="cardContainer"></div>
         <div class="filterParentDiv">
           <div id="filterListingBtn">
-            <i class="fa-solid fa-sliders fa-2xl"></i>
+            <i class="lni lni-radio-button"></i>
           </div>
         </div>
       </div>
@@ -219,7 +223,7 @@
         <div id="vFilterContainer">
           <div id="vFilterHeader">
             <h1>Filter by</h1>
-            <i id="closeFilter" class="fa-solid fa-x fa-2xl"></i>
+            <i id="closeFilter" class="lni lni-close"></i>
           </div>
           <div id="vFilterTitleDiv">
             <h6>By Item Title</h6>
@@ -262,7 +266,7 @@
             <select id="vFilterTypeDropdown"></select>
           </div>
           <div id="vFilterPageCheckDiv">
-            <i class="fa-solid fa-check fa-2xl"></i>
+            <i class="lni lni-checkmark"></i>
           </div>
         </div>
       </div>
@@ -270,41 +274,6 @@
     </section>
     <!-- vListingPage -->
 
-    <!-- SignUp -->
-    <!-- <section class="page" id="signUpPage">
-        <div>
-            <div>
-                <img src="./pictures/logo.png" alt="Logo">
-            </div>
-            <div>
-                <h2>Thank You!</h2>
-            </div>
-        </div>
-        <div class="signUpFormDiv">
-            <form>
-                <input type="tel" id="s" placeholder="Enter Phone Number...">
-                <input type="text" placeholder="Enter Username...">
-                <input type="password" placeholder="Enter Password...">
-                <button type="submit">Sign Up</button>
-            </form>
-            <p>By signing up, you agree to our Terms.</p>
-        </div>
-        <div class="signUpSocialLink">
-            <a href="https://www.facebook.com">
-                <div class="fbIconDiv">
-                    <i class="fa-brands fa-facebook"></i> <span>Sign Up</span>
-                </div>
-            </a>
-            <a href="https://www.instagram.com">
-                <div class="instaIconDiv">
-                    <i class="fa-brands fa-instagram"></i><span>Sign Up</span>
-                </div>
-            </a>
-        </div>
-        <p>Already have account?<a href="#">Sign In</a> </p>
-    </section> -->
-    <!-- /SignUp -->
-    <!-- ////////////////////////ARTIST//////////////////////// -->
     <section class="page" id="aHomePage">
       <div id="statsArtistContainer">
         <div class="statsArtistfirstRow" id="statsArtistSoldItems">
@@ -394,14 +363,11 @@
           <p class="error"></p>
           <div id="addNewCameraDivOuter">
             <div>
-              <i
-                id="addNewCameraBinBtn"
-                class="fa-solid fa-trash-can fa-2xl"
-              ></i>
+              <i id="addNewCameraBinBtn" class="lni lni-trash-can"></i>
             </div>
             <img src="" id="capturedImage" />
             <div id="addNewCameraDivInner">
-              <i class="fa-solid fa-camera fa-2xl"></i>
+              <i class="lni lni-camera"></i>
               <p>Take a snapshot</p>
             </div>
           </div>
@@ -415,7 +381,7 @@
         <div id="cameraContainer">
           <video autoplay id="liveStream"></video>
           <div class="mt-3" id="captureImageBtn">
-            <i class="fa-solid fa-camera fa-2xl"></i>
+            <i class="lni lni-camera"></i>
           </div>
           <canvas id="liveCaptureCanvas"></canvas>
         </div>
@@ -453,7 +419,7 @@
       </div>
       <div id="auctionNoLiveCardDiv">
         <div>
-          <i class="fa-solid fa-circle-info fa-2xl"></i>
+          <i class="lni lni-information"></i>
           <p>The Auction is not in Progress</p>
         </div>
       </div>

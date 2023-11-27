@@ -20,9 +20,9 @@ export const getLocalStorageItems = () => {
 // /localstorage Items
 
 // headerHandler
-const auctionMenu = document.querySelector(".fa-gavel"),
-  hamburgerMenu = document.querySelector(".fa-bars"),
-  homeMenu = document.querySelector(".fa-house"),
+const auctionMenu = document.querySelector(".lni-construction-hammer"),
+  hamburgerMenu = document.querySelector(".lni-menu"),
+  homeMenu = document.querySelector(".lni-home"),
   imgLogoAtag = document.querySelector("#logoPicture"),
   headerContainer = document.querySelector("#headerContainer"),
   h1Header = document.querySelector("#artistHeader");

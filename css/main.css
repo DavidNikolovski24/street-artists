@@ -6,7 +6,8 @@ body {
   overflow: auto;
 }
 
-#logOutHeader, #logInHeader {
+#logOutHeader,
+#logInHeader {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
@@ -91,6 +92,9 @@ body {
 #logInHeader #navbarIconsDiv {
   margin-left: auto;
   margin-right: 20px;
+  display: flex !important;
+  gap: 10px;
+  align-items: center;
 }
 #logInHeader #navbarIconsDiv a {
   color: #a16a5e;
@@ -144,7 +148,7 @@ body {
 }
 #landingPage .choiceMenuLandingPage .joinArtist {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 81%, 0 30%);
-          clip-path: polygon(0 0, 100% 0, 100% 81%, 0 30%);
+  clip-path: polygon(0 0, 100% 0, 100% 81%, 0 30%);
   width: 100%;
   height: 400px;
   background-color: #edd5bb;
@@ -181,7 +185,7 @@ body {
   background-color: #a16a5e;
   height: 400px;
   -webkit-clip-path: polygon(0 24%, 100% 73%, 100% 100%, 0 100%);
-          clip-path: polygon(0 24%, 100% 73%, 100% 100%, 0 100%);
+  clip-path: polygon(0 24%, 100% 73%, 100% 100%, 0 100%);
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -448,7 +452,11 @@ body {
   font-family: "Reenie Beanie", cursive;
   display: inline;
 }
-#vListingPage .cardContainer .customCard:nth-child(even) .customcardArtist span {
+#vListingPage
+  .cardContainer
+  .customCard:nth-child(even)
+  .customcardArtist
+  span {
   color: #fcebd5;
   padding: 5px 10px;
   background-color: #a16a5e;
@@ -576,7 +584,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
-#vFilterPage #vFilterContainer #vFilterPriceDiv #vFilterParentPriceDiv div:nth-child(2) {
+#vFilterPage
+  #vFilterContainer
+  #vFilterPriceDiv
+  #vFilterParentPriceDiv
+  div:nth-child(2) {
   text-align: right;
 }
 #vFilterPage #vFilterContainer #vFilterPriceDiv #vFilterParentPriceDiv input {
@@ -689,7 +701,11 @@ body {
 #aItemsPage #allItemsContainer .artistItemCard .artistItemCardTitleDiv h4 {
   margin: 0;
 }
-#aItemsPage #allItemsContainer .artistItemCard .artistItemCardTitleDiv .artistItemCardPrice {
+#aItemsPage
+  #allItemsContainer
+  .artistItemCard
+  .artistItemCardTitleDiv
+  .artistItemCardPrice {
   color: #fcebd5;
   padding: 5px 10px;
   background-color: #a16a5e;
@@ -706,28 +722,44 @@ body {
   padding: 15px;
   background-color: #a16a5e;
 }
-#aItemsPage #allItemsContainer .artistItemCard .artistItemCardBtnDiv .artistItemCardAuctBtn {
+#aItemsPage
+  #allItemsContainer
+  .artistItemCard
+  .artistItemCardBtnDiv
+  .artistItemCardAuctBtn {
   color: white;
   padding: 5px 10px;
   background-color: #1b59ac;
   border: none;
   border-radius: 3px;
 }
-#aItemsPage #allItemsContainer .artistItemCard .artistItemCardBtnDiv .artistItemCardUnpublishBtn {
+#aItemsPage
+  #allItemsContainer
+  .artistItemCard
+  .artistItemCardBtnDiv
+  .artistItemCardUnpublishBtn {
   color: white;
   padding: 5px 10px;
   background-color: #1bac6f;
   border: none;
   border-radius: 3px;
 }
-#aItemsPage #allItemsContainer .artistItemCard .artistItemCardBtnDiv .artistItemCardRemoveBtn {
+#aItemsPage
+  #allItemsContainer
+  .artistItemCard
+  .artistItemCardBtnDiv
+  .artistItemCardRemoveBtn {
   color: white;
   padding: 5px 10px;
   background-color: #d44c2e;
   border: none;
   border-radius: 3px;
 }
-#aItemsPage #allItemsContainer .artistItemCard .artistItemCardBtnDiv .artistItemCardEditBtn {
+#aItemsPage
+  #allItemsContainer
+  .artistItemCard
+  .artistItemCardBtnDiv
+  .artistItemCardEditBtn {
   color: #a16a5e;
   padding: 5px 10px;
   background-color: #fcebd5;
@@ -757,7 +789,9 @@ body {
   padding: 5px;
   margin-bottom: 1.875rem;
 }
-#aItemsPage #addNewItemDiv select::-moz-placeholder, #aItemsPage #addNewItemDiv input::-moz-placeholder, #aItemsPage #addNewItemDiv textarea::-moz-placeholder {
+#aItemsPage #addNewItemDiv select::-moz-placeholder,
+#aItemsPage #addNewItemDiv input::-moz-placeholder,
+#aItemsPage #addNewItemDiv textarea::-moz-placeholder {
   color: #fcebd5;
 }
 #aItemsPage #addNewItemDiv select::placeholder,
@@ -787,10 +821,18 @@ body {
   justify-content: center;
   align-items: center;
 }
-#aItemsPage #addNewItemDiv #addNewItemForm #addNewCameraDivOuter #capturedImage {
+#aItemsPage
+  #addNewItemDiv
+  #addNewItemForm
+  #addNewCameraDivOuter
+  #capturedImage {
   position: absolute;
 }
-#aItemsPage #addNewItemDiv #addNewItemForm #addNewCameraDivOuter #addNewCameraBinBtn {
+#aItemsPage
+  #addNewItemDiv
+  #addNewItemForm
+  #addNewCameraDivOuter
+  #addNewCameraBinBtn {
   color: #d44c2e;
   position: absolute;
   top: 30px;
@@ -799,11 +841,20 @@ body {
   cursor: pointer;
   display: none;
 }
-#aItemsPage #addNewItemDiv #addNewItemForm #addNewCameraDivOuter #addNewCameraDivInner {
+#aItemsPage
+  #addNewItemDiv
+  #addNewItemForm
+  #addNewCameraDivOuter
+  #addNewCameraDivInner {
   text-align: center;
   margin: 100px;
 }
-#aItemsPage #addNewItemDiv #addNewItemForm #addNewCameraDivOuter #addNewCameraDivInner i {
+#aItemsPage
+  #addNewItemDiv
+  #addNewItemForm
+  #addNewCameraDivOuter
+  #addNewCameraDivInner
+  i {
   font-size: 70px;
   margin-bottom: 40px;
 }
@@ -821,7 +872,11 @@ body {
   font-weight: bold;
   width: 46%;
 }
-#aItemsPage #addNewItemDiv #addNewItemForm #addNewItemBtnDiv #addNewItemCloseBtn {
+#aItemsPage
+  #addNewItemDiv
+  #addNewItemForm
+  #addNewItemBtnDiv
+  #addNewItemCloseBtn {
   color: black;
   padding: 10px 20px;
   background-color: #e5e5e5;
@@ -914,7 +969,12 @@ body {
 #auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv #auctionBidDiv form {
   text-align: center;
 }
-#auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv #auctionBidDiv form input {
+#auction
+  #auctionLiveContainerDiv
+  #auctionBidAndHistoryDiv
+  #auctionBidDiv
+  form
+  input {
   outline: none;
   border: none;
   border: 1px solid #fcebd5;
@@ -923,13 +983,28 @@ body {
   padding: 5px;
   margin-bottom: 1.875rem;
 }
-#auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv #auctionBidDiv form input::-moz-placeholder {
+#auction
+  #auctionLiveContainerDiv
+  #auctionBidAndHistoryDiv
+  #auctionBidDiv
+  form
+  input::-moz-placeholder {
   color: #fcebd5;
 }
-#auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv #auctionBidDiv form input::placeholder {
+#auction
+  #auctionLiveContainerDiv
+  #auctionBidAndHistoryDiv
+  #auctionBidDiv
+  form
+  input::placeholder {
   color: #fcebd5;
 }
-#auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv #auctionBidDiv form button {
+#auction
+  #auctionLiveContainerDiv
+  #auctionBidAndHistoryDiv
+  #auctionBidDiv
+  form
+  button {
   color: #e5e5e5;
   padding: 5px 10px;
   background-color: #1bac6f;
@@ -939,7 +1014,11 @@ body {
 #auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv #auctionHistoryDiv {
   margin: 0 0.9375rem;
 }
-#auction #auctionLiveContainerDiv #auctionBidAndHistoryDiv #auctionHistoryDiv td {
+#auction
+  #auctionLiveContainerDiv
+  #auctionBidAndHistoryDiv
+  #auctionHistoryDiv
+  td {
   border: 1px solid #fcebd5;
 }
 #auction #auctionBidAndHistoryDiv p {
@@ -963,4 +1042,4 @@ body {
 }
 #auction #auctionNoLiveCardDiv div p {
   margin-top: 1.25rem;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
